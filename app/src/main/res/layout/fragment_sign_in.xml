@@ -4,8 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.screens.signin.SignInFragment"
-    android:background="@color/background">
+    android:background="@color/background"
+    tools:context=".presentation.screens.signin.SignInFragment">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:src="@drawable/vector_1"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView"
@@ -33,29 +43,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:src="@drawable/vector_1"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="34dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
         android:layout_marginBottom="16dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/textViewName"
@@ -70,7 +69,7 @@
             android:id="@+id/editTextLayout1"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="match_parent"
             android:hint="@string/user_name_hint"
             app:endIconMode="clear_text">
 
@@ -85,6 +84,7 @@
             android:id="@+id/textViewLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:text="@string/user_login"
             android:textColor="@color/black"
@@ -94,7 +94,7 @@
             android:id="@+id/editTextLayout2"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="match_parent"
             android:hint="@string/user_login_hint"
             app:endIconMode="clear_text">
 
@@ -108,6 +108,7 @@
             android:id="@+id/textViewPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:text="@string/user_password"
             android:textColor="@color/black"
@@ -117,7 +118,7 @@
             android:id="@+id/editTextLayout3"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="match_parent"
             android:hint="@string/user_password_hint"
             app:endIconMode="password_toggle">
 
@@ -134,6 +135,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:text="@string/license"
             android:textAlignment="center"
             android:textColor="@color/main" />
@@ -164,5 +166,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/cranberry_logo_"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
