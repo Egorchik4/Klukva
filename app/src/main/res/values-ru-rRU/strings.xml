@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Klukva</string>
+    <string name="app_name">Клюква</string>
 
     <string name="name">КЛЮКВА</string>
     <string name="name_of_language">RU</string>
@@ -15,4 +15,7 @@
     <string name="license">Регистрируясь, вы соглашаетесь с Политикой конфиденциальности и Условиями использования</string>
     <string name="ok">ок</string>
     <string name="registration_already">Уже зарегистрированы? Войти</string>
+
+    <string name="forgot_password">Забыл(а) пароль</string>
+    <string name="dont_have_an_account_yet_register">Еще нет аккаунта? Зарегистрироваться</string>
 </resources>

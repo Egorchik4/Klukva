@@ -15,4 +15,7 @@
     <string name="license">By registering, you agree to the Privacy Policy and Terms of Use</string>
     <string name="ok">OK</string>
     <string name="registration_already">Already registered? Enter</string>
+
+    <string name="forgot_password">Forgot password</string>
+    <string name="dont_have_an_account_yet_register">Don\'t have an account yet? Register</string>
 </resources>

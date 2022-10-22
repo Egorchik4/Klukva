@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".presentation.screens.signin.SignInFragment">
+    tools:context=".presentation.screens.login.LogInFragment">
 
     <ImageView
         android:id="@+id/imageView5"
@@ -57,35 +57,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5">
 
-        <TextView
-            android:id="@+id/textViewName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="@string/user_name"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/editTextLayout1"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/user_name_hint"
-            app:endIconMode="clear_text">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </com.google.android.material.textfield.TextInputLayout>
-
 
         <TextView
             android:id="@+id/textViewLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:text="@string/user_login"
             android:textColor="@color/black"
@@ -133,12 +109,11 @@
 
         <TextView
             android:id="@+id/textViewLicense"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="@string/license"
+            android:text="@string/forgot_password"
             android:textAlignment="center"
             android:textColor="@color/main" />
 
@@ -154,7 +129,7 @@
         android:text="@string/ok"
         android:textSize="20sp"
         app:cornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/textRegistrationAlready"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -163,7 +138,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
-        android:text="@string/registration_already"
+        android:text="@string/dont_have_an_account_yet_register"
         android:textAlignment="center"
         android:textColor="@color/main"
         app:layout_constraintBottom_toBottomOf="parent"
