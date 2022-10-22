@@ -6,6 +6,7 @@ import com.example.klukva.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.Launcher)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
