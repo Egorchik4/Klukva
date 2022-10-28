@@ -1,6 +1,5 @@
 package com.example.klukva.presentation.screens.login
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,8 +9,6 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.klukva.R
 import com.example.klukva.databinding.FragmentLogInBinding
-import com.example.klukva.databinding.FragmentSignInBinding
-import com.example.klukva.presentation.screens.signin.SignInViewModel
 
 class LogInFragment : Fragment() {
     lateinit var binding: FragmentLogInBinding
@@ -24,8 +21,12 @@ class LogInFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.textRegistrationAlready.setOnClickListener {
+        binding.textRegistrationNoAccount.setOnClickListener {
             findNavController().popBackStack()
+        }
+
+        binding.buttonOK.setOnClickListener {
+            findNavController().navigate(R.id.action_logInFragment_to_dateTimeFragment)
         }
     }
 
