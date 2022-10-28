@@ -26,5 +26,9 @@ class SignInFragment : Fragment() {
             findNavController().navigate(R.id.action_signInFragment_to_logInFragment)
         }
 
+        binding.buttonOK.setOnClickListener {
+            findNavController().navigate(R.id.action_signInFragment_to_dateTimeFragment)
+        }
+
     }
 }

@@ -13,10 +13,22 @@
         <action
             android:id="@+id/action_signInFragment_to_logInFragment"
             app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_dateTimeFragment"
+            app:destination="@id/dateTimeFragment" />
     </fragment>
     <fragment
         android:id="@+id/logInFragment"
         android:name="com.example.klukva.presentation.screens.login.LogInFragment"
         android:label="fragment_log_in"
-        tools:layout="@layout/fragment_log_in" />
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logInFragment_to_dateTimeFragment"
+            app:destination="@id/dateTimeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dateTimeFragment"
+        android:name="com.example.klukva.presentation.screens.datetime.DateTimeFragment"
+        android:label="fragment_date_time"
+        tools:layout="@layout/fragment_date_time" />
 </navigation>
