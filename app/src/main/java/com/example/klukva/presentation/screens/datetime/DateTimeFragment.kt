@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.klukva.R
 import com.example.klukva.databinding.FragmentDateTimeBinding
 
@@ -41,6 +42,9 @@ class DateTimeFragment : Fragment() {
         }
 
 
+        binding.buttonSearch.setOnClickListener {
+            findNavController().navigate(R.id.action_dateTimeFragment_to_mapFragment)
+        }
 
         binding.imMenu.setOnClickListener {
             findNavController().navigate(R.id.action_dateTimeFragment_to_profileFragment)

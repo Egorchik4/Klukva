@@ -30,5 +30,14 @@
         android:id="@+id/dateTimeFragment"
         android:name="com.example.klukva.presentation.screens.datetime.DateTimeFragment"
         android:label="fragment_date_time"
-        tools:layout="@layout/fragment_date_time" />
+        tools:layout="@layout/fragment_date_time" >
+        <action
+            android:id="@+id/action_dateTimeFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.klukva.presentation.screens.map.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
 </navigation>
