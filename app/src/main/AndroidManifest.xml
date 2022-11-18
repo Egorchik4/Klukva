@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Klukva"
-        tools:targetApi="33">
+        tools:targetApi="33"
+        android:name=".app.App">
         <activity
             android:name=".presentation.activity.MainActivity"
             android:exported="true"

@@ -13,22 +13,25 @@ class MapViewModel : ViewModel() {
 
     private var listPoint: MutableList<LocationModel> = mutableListOf(
         LocationModel(
+            id = 0,
             point = Point(56.464326, 84.956659),
             name = "Молчание ягнят",
             time = "c 9 до 21",
-            load = '3'
+            load = "3"
         ),
         LocationModel(
+            id = 1,
             point = Point(56.463883, 84.957018),
             name = "Yoki Toki",
             time = "c 9 до 23",
-            load = '5'
+            load = "5"
         ),
         LocationModel(
+            id = 2,
             point = Point(56.463769, 84.951853),
             name = "Pizza",
             time = "c 12 до 20",
-            load = '1'
+            load = "1"
         )
     )
     init{
