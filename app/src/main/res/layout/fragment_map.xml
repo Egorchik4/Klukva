@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.screens.map.MapFragment">
+    tools:context=".presentation.screens.map.MapFragment"
+    android:background="@color/background"
+    tools:ignore="ContentDescription">
 
     <ImageView
         android:id="@+id/imageView5"
@@ -52,7 +54,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" >
+
+    </com.yandex.mapkit.mapview.MapView>
 
 
     <com.google.android.material.button.MaterialButton
@@ -63,20 +67,31 @@
         android:layout_marginEnd="34dp"
         android:layout_marginBottom="39dp"
         android:text="@string/find_options"
+        android:textAllCaps="false"
         android:textSize="20sp"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/user_location_fab"
+    <ImageButton
+        android:id="@+id/userLocationFab"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        app:backgroundTint="@color/white"
-        app:elevation="8dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/user_location_fab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mapViewYandex" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pager"
+        android:layout_width="0dp"
+        android:layout_height="135dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginStart="34dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/buttonFind"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

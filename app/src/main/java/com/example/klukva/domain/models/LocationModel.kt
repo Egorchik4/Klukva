@@ -4,8 +4,13 @@ import com.yandex.mapkit.geometry.Point
 
 data class LocationModel(
 	var id: Int,
-	var point: Point,
+	var location: Point,
 	var name: String,
-	var time: String,
-	var load: String
+	var open_time: String,
+	var load: String,
+	var kitchen_name: String,
+	var adres: String,
+	var average_rating: String,
+	var number_of_reviews: String,
+	var picture_location: Int
 )
