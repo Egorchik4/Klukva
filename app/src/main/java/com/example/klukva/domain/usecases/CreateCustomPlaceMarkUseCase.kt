@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Rect
+import androidx.core.content.ContextCompat
 import com.example.klukva.R
 import javax.inject.Inject
 
@@ -14,11 +15,11 @@ class CreateCustomPlaceMarkUseCase @Inject constructor(var paintText: Paint, var
 
 
 	fun drawBitmap(textName: String, textTime: String, textLoad: String, context: Context,resources: Resources): Bitmap {
-		val bitmapPoint = BitmapFactory.decodeResource(context.resources, R.drawable.point)  // перевод изображения в bitmap
+		val bitmapPoint = BitmapFactory.decodeResource(context.resources, R.drawable.point)
 
-		paintText.color = resources.getColor(R.color.main)
+		paintText.color = ContextCompat.getColor(context,R.color.main)
 		paintText.isAntiAlias = true
-		paintText.textSize = 30F
+		paintText.textSize = resources.getDimension(R.dimen.myFontSize)
 		paintText.textAlign = Paint.Align.LEFT
 
 		val textWidth1 = paintText.measureText(textName)
@@ -49,12 +50,12 @@ class CreateCustomPlaceMarkUseCase @Inject constructor(var paintText: Paint, var
 			textWidth.toInt()
 		}
 
-		val picHeight:Int = (bitmapPoint.height+textHeight)
+		val picHeight:Int = (bitmapPoint.height + textHeight)
 		val bitmap = Bitmap.createBitmap(picWidth, picHeight, Bitmap.Config.ARGB_8888)
 		canvas.setBitmap(bitmap)
 
 
-		val otstupLeft = (picWidth-bitmapPoint.width)/2
+		val otstupLeft = (picWidth - bitmapPoint.width)/2
 		val otstupTop = textHeight
 		canvas.drawBitmap(bitmapPoint,otstupLeft.toFloat(),otstupTop.toFloat(),paintText)
 
@@ -73,10 +74,10 @@ class CreateCustomPlaceMarkUseCase @Inject constructor(var paintText: Paint, var
 						paintText)
 
 		val centerXText = width/2 - textWidth3/2
-		val otstup = 50F
+		val indent = resources.getDimension(R.dimen.myIndent)
 		canvas.drawText(textLoad,
 						centerXText,
-						textHeight3.toFloat()+textHeight2.toFloat()+textHeight1.toFloat()+otstup,
+						textHeight3.toFloat()+textHeight2.toFloat()+textHeight1.toFloat()+indent,
 						paintText)
 		return bitmap
 	}

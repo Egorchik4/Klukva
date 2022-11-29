@@ -19,4 +19,7 @@
     <style name="Launcher" parent="Theme.Klukva">
         <item name="android:windowBackground">@drawable/splash_screen</item>
     </style>
+
+    <dimen name="myFontSize">20sp</dimen>
+    <dimen name="myIndent">12sp</dimen>
 </resources>

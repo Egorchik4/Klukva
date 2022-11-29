@@ -12,4 +12,5 @@
     <color name="background">#EFEFEF</color>
     <color name="black_shadow">#4D3E3D3D</color>
     <color name="white_shadow">#4DFFFFFF</color>
+    <color name="view_page_color">#EFEFEF</color>
 </resources>

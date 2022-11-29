@@ -23,4 +23,21 @@
     <string name="time">Время</string>
     <string name="duration">Длительность</string>
     <string name="find_options">Найти варианты</string>
+
+    <string name="Menu">Меню</string>
+    <string name="Poke">Поке</string>
+    <string name="Soups">Супы</string>
+    <string name="Main_Dishes">Осн. блюда</string>
+    <string name="Salads">Салаты</string>
+    <string name="Snacks">Закуски</string>
+    <string name="Wok">Вок</string>
+    <string name="Sauces">Соусы</string>
+    <string name="Desserts">Десерты</string>
+    <string name="Drinks">Напитки</string>
+
+    <string name="All">Все</string>
+    <string name="Positive">Позитивные</string>
+    <string name="Negative">Негативные</string>
+    <string name="Average_Rating">Средяя оценка</string>
+    <string name="Number_Of_Reviews">Количество отзывов</string>
 </resources>
