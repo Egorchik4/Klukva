@@ -40,4 +40,7 @@
     <string name="Negative">Негативные</string>
     <string name="Average_Rating">Средяя оценка</string>
     <string name="Number_Of_Reviews">Количество отзывов</string>
+
+    <string name="PreOrder">Предзаказ</string>
+    <string name="ToBook">Забронировать</string>
 </resources>
