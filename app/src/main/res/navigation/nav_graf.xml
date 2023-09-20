@@ -39,5 +39,14 @@
         android:id="@+id/mapFragment"
         android:name="com.example.klukva.presentation.screens.map.MapFragment"
         android:label="fragment_map"
-        tools:layout="@layout/fragment_map" />
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_mapFragment_to_mapOfCafeFragment"
+            app:destination="@id/mapOfCafeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapOfCafeFragment"
+        android:name="com.example.klukva.presentation.screens.map_of_cafe.MapOfCafeFragment"
+        android:label="fragment_map_of_cafe"
+        tools:layout="@layout/fragment_map_of_cafe" />
 </navigation>
