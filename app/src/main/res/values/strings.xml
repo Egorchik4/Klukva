@@ -43,4 +43,7 @@
     <string name="Negative">Negative</string>
     <string name="Average_Rating">Average rating</string>
     <string name="Number_Of_Reviews">Number of reviews</string>
+
+    <string name="PreOrder">PreOrder</string>
+    <string name="ToBook">To Book</string>
 </resources>

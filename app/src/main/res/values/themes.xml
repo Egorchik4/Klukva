@@ -14,10 +14,24 @@
         <!-- Customize your theme here. -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="Launcher" parent="Theme.Klukva">
         <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextContainer" parent="Theme.Klukva">
+        <item name="android:textColor">@color/purple_700</item>
+    </style>
+
+    <style name="ViweStyle" parent="Theme.Klukva">
+        <item name="android:textColor">@color/mainT</item>
+    </style>
+
+    <style name="TextStyle" parent="Theme.Klukva">
+        <item name="android:textColor">@color/main</item>
     </style>
 
     <dimen name="myFontSize">20sp</dimen>
