@@ -55,8 +55,16 @@
         tools:layout="@layout/fragment_map_of_cafe" >
         <action android:id="@+id/action_mapOfCafeFragment_to_profileFragment"
             app:destination="@id/profileFragment"/>
+        <action android:id="@+id/action_mapOfCafeFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment"/>
     </fragment>
     <fragment android:id="@+id/profileFragment"
         android:name="com.example.klukva.presentation.screens.profile.ProfileFragment"
         android:label="ProfileFragment"/>
+    <fragment android:id="@+id/paymentFragment"
+        android:name="com.example.klukva.presentation.screens.payment.PaymentFragment"
+        android:label="PaymentFragment">
+        <action android:id="@+id/action_paymentFragment_to_profileFragment"
+            app:destination="@id/profileFragment"/>
+    </fragment>
 </navigation>
