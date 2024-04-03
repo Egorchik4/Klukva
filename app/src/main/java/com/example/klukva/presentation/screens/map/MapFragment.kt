@@ -40,9 +40,10 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MapFragment : Fragment(), UserLocationObjectListener, MapObjectTapListener, InputListener {
 
-	lateinit var mapView: MapView
-	lateinit var binding: FragmentMapBinding
+	private lateinit var mapView: MapView
+	private lateinit var binding: FragmentMapBinding
 	private val viewModelMapViewModel: MapViewModel by viewModels()
+
 	@Inject
 	lateinit var drawCustomPlaceMarkUseCase: CreateCustomPlaceMarkUseCase
 	private val adapter = ViewPagerAdapter()
@@ -65,6 +66,9 @@ class MapFragment : Fragment(), UserLocationObjectListener, MapObjectTapListener
 		val viewPager = binding.pager
 		viewPager.adapter = adapter
 
+		binding.imMenu.setOnClickListener {
+			findNavController().navigate(R.id.action_mapFragment_to_profileFragment)
+		}
 
 		viewModelMapViewModel.dataMapPointLive.observe(viewLifecycleOwner) {
 			addPlaceMarks(it)

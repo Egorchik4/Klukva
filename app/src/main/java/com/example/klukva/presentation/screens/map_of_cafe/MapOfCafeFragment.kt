@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.example.klukva.R
 import com.example.klukva.data.constants.Constant
 import com.example.klukva.databinding.FragmentMapOfCafeBinding
 
@@ -21,6 +23,10 @@ class MapOfCafeFragment : Fragment() {
 
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
+
+		binding.imMenu.setOnClickListener {
+			findNavController().navigate(R.id.action_mapFragment_to_profileFragment)
+		}
 
 		parentFragmentManager.setFragmentResultListener(Constant.PLACEMARK_INFO, viewLifecycleOwner) { _, data ->
 			val nameCafe = data.getString(Constant.NAME_OF_CAFE)

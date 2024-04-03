@@ -34,6 +34,8 @@
         <action
             android:id="@+id/action_dateTimeFragment_to_mapFragment"
             app:destination="@id/mapFragment" />
+        <action android:id="@+id/action_dateTimeFragment_to_profileFragment"
+            app:destination="@id/profileFragment"/>
     </fragment>
     <fragment
         android:id="@+id/mapFragment"
@@ -43,10 +45,18 @@
         <action
             android:id="@+id/action_mapFragment_to_mapOfCafeFragment"
             app:destination="@id/mapOfCafeFragment" />
+        <action android:id="@+id/action_mapFragment_to_profileFragment"
+            app:destination="@id/profileFragment"/>
     </fragment>
     <fragment
         android:id="@+id/mapOfCafeFragment"
         android:name="com.example.klukva.presentation.screens.map_of_cafe.MapOfCafeFragment"
         android:label="fragment_map_of_cafe"
-        tools:layout="@layout/fragment_map_of_cafe" />
+        tools:layout="@layout/fragment_map_of_cafe" >
+        <action android:id="@+id/action_mapOfCafeFragment_to_profileFragment"
+            app:destination="@id/profileFragment"/>
+    </fragment>
+    <fragment android:id="@+id/profileFragment"
+        android:name="com.example.klukva.presentation.screens.profile.ProfileFragment"
+        android:label="ProfileFragment"/>
 </navigation>

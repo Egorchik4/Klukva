@@ -46,6 +46,10 @@ class DateTimeFragment : Fragment() {
             findNavController().navigate(R.id.action_dateTimeFragment_to_mapFragment)
         }
 
+        binding.imMenu.setOnClickListener {
+            findNavController().navigate(R.id.action_dateTimeFragment_to_profileFragment)
+        }
+
         var n = 1
         binding.textViewCount.text = n.toString()
         binding.buttonMinus.setOnClickListener {

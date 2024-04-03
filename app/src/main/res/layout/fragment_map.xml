@@ -36,15 +36,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="45dp"
         android:fontFamily="@font/montserrat_alternates_light"
         android:text="@string/name_of_language"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/textView"/>
 
-
+    <ImageView
+        android:id="@+id/imMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:src="@drawable/ic_menu"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <com.yandex.mapkit.mapview.MapView
         android:id="@+id/mapViewYandex"
