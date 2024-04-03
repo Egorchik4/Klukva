@@ -5,8 +5,8 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:background="@color/background"
-	android:theme="@style/TextContainer"
-	tools:context=".presentation.screens.map_of_cafe.MapOfCafeFragment">
+	tools:context=".presentation.screens.map.MapFragment"
+	tools:ignore="ContentDescription">
 
 	<ImageView
 		android:id="@+id/imageView5"
@@ -26,79 +26,58 @@
 		android:layout_marginTop="45dp"
 		android:fontFamily="@font/montserrat_alternates_light"
 		android:text="@string/name_of_language"
-		android:textAppearance="@style/TextContainer"
 		android:textColor="@color/black"
 		android:textSize="18sp"
-		android:theme="@style/TextContainer"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"/>
-
-	<TextView
-		android:id="@+id/textViewNameOfCafe"
-		android:layout_width="0dp"
-		android:layout_height="45dp"
-		android:layout_marginEnd="36dp"
-		android:layout_marginStart="36dp"
-		android:layout_marginTop="30dp"
-		android:background="@drawable/custom_text_view_shape_view_pager"
-		android:gravity="center"
-		android:textAlignment="center"
-		android:textColor="@color/black"
-		android:textSize="20sp"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/imageView5"/>
 
 	<ImageView
 		android:id="@+id/imMenu"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginEnd="36dp"
+		android:layout_marginTop="45dp"
 		android:src="@drawable/ic_menu"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintBottom_toTopOf="@+id/imageView5"
-		app:layout_constraintTop_toTopOf="@+id/textView2"/>
+		app:layout_constraintTop_toTopOf="parent"/>
 
-	<com.google.android.material.button.MaterialButton
-		android:id="@+id/buttonPreOrder"
-		android:layout_width="0dp"
-		android:layout_height="56dp"
-		android:layout_marginBottom="25dp"
-		android:layout_marginEnd="34dp"
-		android:layout_marginStart="34dp"
-		android:text="@string/PreOrder"
-		android:textAllCaps="false"
-		android:textSize="20sp"
-		app:cornerRadius="10dp"
-		app:layout_constraintBottom_toTopOf="@+id/buttonToBook"
+	<ImageView
+		android:id="@+id/imageView7"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/cranberry_logo_"
+		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintHorizontal_bias="1.0"
-		app:layout_constraintStart_toStartOf="parent"/>
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintBottom_toTopOf="@+id/buttonOk"/>
+
+	<TextView
+		android:id="@+id/textView3"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginHorizontal="18dp"
+		android:text="Ваш заказ оплачен. Спасибо, что выбрали нас!"
+		android:textColor="@color/main"
+		android:textSize="30sp"
+		android:textAlignment="center"
+		android:fontFamily="@font/montserrat"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintBottom_toTopOf="@+id/buttonOk"
+		app:layout_constraintTop_toBottomOf="@+id/imageView7"/>
 
 	<com.google.android.material.button.MaterialButton
-		android:id="@+id/buttonToBook"
+		android:id="@+id/buttonOk"
 		android:layout_width="0dp"
 		android:layout_height="56dp"
 		android:layout_marginBottom="39dp"
 		android:layout_marginEnd="34dp"
 		android:layout_marginStart="34dp"
-		android:text="@string/ToBook"
+		android:text="Ok"
 		android:textAllCaps="false"
 		android:textSize="20sp"
 		app:cornerRadius="10dp"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"/>
-
-	<com.example.klukva.presentation.screens.map_of_cafe.view.MapOfCafeView
-		android:id="@+id/mapOfCafeView"
-		android:layout_width="0dp"
-		android:layout_height="0dp"
-		android:layout_marginBottom="10dp"
-		android:layout_marginTop="10dp"
-		app:layout_constraintBottom_toTopOf="@+id/buttonPreOrder"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/textViewNameOfCafe"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,15 +24,23 @@ class MapOfCafeFragment : Fragment() {
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
 
-		binding.imMenu.setOnClickListener {
-			findNavController().navigate(R.id.action_mapFragment_to_profileFragment)
-		}
-
 		parentFragmentManager.setFragmentResultListener(Constant.PLACEMARK_INFO, viewLifecycleOwner) { _, data ->
 			val nameCafe = data.getString(Constant.NAME_OF_CAFE)
 			binding.textViewNameOfCafe.text = nameCafe
 		}
 
+		setListeners()
+	}
+
+	private fun setListeners() {
+		with(binding) {
+			imMenu.setOnClickListener {
+				findNavController().navigate(R.id.action_mapFragment_to_profileFragment)
+			}
+			buttonToBook.setOnClickListener {
+				findNavController().navigate(R.id.action_mapOfCafeFragment_to_paymentFragment)
+			}
+		}
 	}
 
 }
