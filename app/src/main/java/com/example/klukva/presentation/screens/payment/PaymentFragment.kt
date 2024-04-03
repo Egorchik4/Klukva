@@ -56,7 +56,7 @@ class PaymentFragment : Fragment() {
 				findNavController().navigate(R.id.action_paymentFragment_to_profileFragment)
 			}
 			buttonPay.setOnClickListener {
-				//findNavController().navigate(R.id.action_paymentFragment_to_profileFragment)
+				findNavController().navigate(R.id.action_paymentFragment_to_endFragment)
 			}
 		}
 	}

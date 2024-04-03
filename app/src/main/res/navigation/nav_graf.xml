@@ -66,5 +66,13 @@
         android:label="PaymentFragment">
         <action android:id="@+id/action_paymentFragment_to_profileFragment"
             app:destination="@id/profileFragment"/>
+        <action android:id="@+id/action_paymentFragment_to_endFragment"
+            app:destination="@id/endFragment"/>
+    </fragment>
+    <fragment android:id="@+id/endFragment"
+        android:name="com.example.klukva.presentation.screens.end.EndFragment"
+        android:label="EndFragment">
+        <action android:id="@+id/action_endFragment_to_profileFragment"
+            app:destination="@id/profileFragment"/>
     </fragment>
 </navigation>
