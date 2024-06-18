@@ -1,0 +1,15 @@
+ext.unpackMapValues = { map, lambda ->
+	map.each {
+		if (it.value instanceof String) {
+			lambda(it.value)
+		} else if (it.value instanceof Map) {
+			unpackMapValues(it.value, lambda)
+		}
+	}
+}
+
+//ext.unpackMapDependencies = { map, lambda ->
+//	map.each { _, value ->
+//		lambda(value)
+//	}
+//}

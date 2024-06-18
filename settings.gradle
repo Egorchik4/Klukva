@@ -13,4 +13,9 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Klukva"
-include ':app'
+
+apply from: 'gradleSettings/modules.gradle'
+apply from: 'gradleSettings/mapping.gradle'
+unpackMapValues(Modules) {
+    include(it)
+}

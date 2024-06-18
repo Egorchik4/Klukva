@@ -7,9 +7,10 @@
 
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.example.klukva.presentation.screens.signin.SignInFragment"
+        android:name="com.example.feature.signin.presentation.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" >
+        <deepLink app:uri="myApp://signInFragment"/>
         <action
             android:id="@+id/action_signInFragment_to_logInFragment"
             app:destination="@id/logInFragment" />
@@ -19,18 +20,20 @@
     </fragment>
     <fragment
         android:id="@+id/logInFragment"
-        android:name="com.example.klukva.presentation.screens.login.LogInFragment"
+        android:name="com.example.feature.login.presentation.LogInFragment"
         android:label="fragment_log_in"
         tools:layout="@layout/fragment_log_in" >
+        <deepLink app:uri="myApp://logInFragment"/>
         <action
             android:id="@+id/action_logInFragment_to_dateTimeFragment"
             app:destination="@id/dateTimeFragment" />
     </fragment>
     <fragment
         android:id="@+id/dateTimeFragment"
-        android:name="com.example.klukva.presentation.screens.datetime.DateTimeFragment"
+        android:name="com.example.feature.datetime.presentation.DateTimeFragment"
         android:label="fragment_date_time"
         tools:layout="@layout/fragment_date_time" >
+        <deepLink app:uri="myApp://dateTimeFragment"/>
         <action
             android:id="@+id/action_dateTimeFragment_to_mapFragment"
             app:destination="@id/mapFragment" />
@@ -39,9 +42,10 @@
     </fragment>
     <fragment
         android:id="@+id/mapFragment"
-        android:name="com.example.klukva.presentation.screens.map.MapFragment"
+        android:name="com.example.feature.map.presentation.MapFragment"
         android:label="fragment_map"
         tools:layout="@layout/fragment_map" >
+        <deepLink app:uri="myApp://mapFragment"/>
         <action
             android:id="@+id/action_mapFragment_to_mapOfCafeFragment"
             app:destination="@id/mapOfCafeFragment" />
@@ -50,28 +54,33 @@
     </fragment>
     <fragment
         android:id="@+id/mapOfCafeFragment"
-        android:name="com.example.klukva.presentation.screens.map_of_cafe.MapOfCafeFragment"
+        android:name="com.example.feature.mapofcafe.presentation.MapOfCafeFragment"
         android:label="fragment_map_of_cafe"
         tools:layout="@layout/fragment_map_of_cafe" >
+        <deepLink app:uri="myApp://mapOfCafeFragment"/>
         <action android:id="@+id/action_mapOfCafeFragment_to_profileFragment"
             app:destination="@id/profileFragment"/>
         <action android:id="@+id/action_mapOfCafeFragment_to_paymentFragment"
             app:destination="@id/paymentFragment"/>
     </fragment>
     <fragment android:id="@+id/profileFragment"
-        android:name="com.example.klukva.presentation.screens.profile.ProfileFragment"
-        android:label="ProfileFragment"/>
+        android:name="com.example.feature.profile.presentation.ProfileFragment"
+        android:label="ProfileFragment">
+        <deepLink app:uri="myApp://profileFragment"/>
+    </fragment>
     <fragment android:id="@+id/paymentFragment"
-        android:name="com.example.klukva.presentation.screens.payment.PaymentFragment"
+        android:name="com.example.feature.payment.presentation.PaymentFragment"
         android:label="PaymentFragment">
+        <deepLink app:uri="myApp://paymentFragment"/>
         <action android:id="@+id/action_paymentFragment_to_profileFragment"
             app:destination="@id/profileFragment"/>
         <action android:id="@+id/action_paymentFragment_to_endFragment"
             app:destination="@id/endFragment"/>
     </fragment>
     <fragment android:id="@+id/endFragment"
-        android:name="com.example.klukva.presentation.screens.end.EndFragment"
+        android:name="com.example.feature.end.presentation.EndFragment"
         android:label="EndFragment">
+        <deepLink app:uri="myApp://endFragment"/>
         <action android:id="@+id/action_endFragment_to_profileFragment"
             app:destination="@id/profileFragment"/>
     </fragment>

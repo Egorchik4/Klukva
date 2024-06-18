@@ -1,0 +1,96 @@
+ext.Versions = [
+	LIFECYCLE              : "2.8.2",
+	MATERIAL               : "1.12.0",
+	CONSTRAINT_LAYOUT      : "2.1.4",
+	CORE_KTX               : "1.13.1",
+	APP_COMPAT             : "1.7.0",
+	LEGACY_SUPPORT         : "1.0.0",
+	LIVE_DATA              : "2.8.2",
+	LIFECYCLE_VIEWMODEL_KTX: "2.8.2",
+	FRAGMENT_KTX           : "1.8.0",
+
+	COROUTINE              : "1.7.3",
+
+	RETROFIT               : "2.9.0",
+	OKHTTP                 : "4.9.0",
+	GSON                   : "2.9.0",
+
+	DAGGER                 : "2.50",
+
+	NAVIGATION             : "2.7.7",
+	MAP_KIT                : "4.2.2-full",
+	VIEW_PAGER             : "1.1.0",
+
+	GLIDE                  : "4.16.0",
+]
+
+ext.Dependends = [
+	LIFECYCLE        : [
+		LIFECYCLE_LIVEDATA_KTX : "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.LIFECYCLE}",
+		LIFECYCLE_VIEWMODEL_KTX: "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.LIFECYCLE}",
+	],
+
+	MATERIAL         : "com.google.android.material:material:${Versions.MATERIAL}",
+	CORE             : "androidx.core:core-ktx:${Versions.CORE_KTX}",
+	CONSTRAINT_LAYOUT: "androidx.constraintlayout:constraintlayout:${Versions.CONSTRAINT_LAYOUT}",
+	APP_COMPAT       : "androidx.appcompat:appcompat:${Versions.APP_COMPAT}",
+	FRAGMENT         : "androidx.fragment:fragment-ktx:${Versions.FRAGMENT_KTX}",
+	LEGACY_SUPPORT   : "androidx.legacy:legacy-support-v4:${Versions.LEGACY_SUPPORT}",
+
+	DAGGER           : [
+		DAGGER          : "com.google.dagger:dagger:${Versions.DAGGER}",
+		DAGGER_COMPILLER: "com.google.dagger:dagger-compiler:${Versions.DAGGER}",
+	],
+
+	COROUTINE        : [
+		COROUTINE_CORE   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.COROUTINE}",
+		COROUTINE_ANDROID: "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.COROUTINE}",
+	],
+
+	SQUAREUP         : [
+		RETROFIT          : "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}",
+		RETROFIT_CONVERTER: "com.squareup.retrofit2:converter-gson:${Versions.RETROFIT}",
+		OKHTTP_INTERCEPTOR: "com.squareup.okhttp3:logging-interceptor:${Versions.OKHTTP}",
+	],
+
+	NAVIGATION       : [
+		"androidx.navigation:navigation-fragment-ktx:${Versions.NAVIGATION}",
+		"androidx.navigation:navigation-ui-ktx:${Versions.NAVIGATION}"
+	],
+
+	MAP_KIT          : "com.yandex.android:maps.mobile:${Versions.MAP_KIT}",
+
+	VIEW_PAGER       : "androidx.viewpager2:viewpager2:${Versions.VIEW_PAGER}",
+
+	GLIDE            : "com.github.bumptech.glide:glide:${Versions.GLIDE}",
+
+	GSON             : "com.google.code.gson:gson:${Versions.GSON}",
+]
+
+ext.VersionsForTests = [
+	JUNIT_EXT     : "1.1.5",
+	ESPRESSO_CORE : "3.5.1",
+	JUNIT         : "4.13.2",
+
+	MOCKITO_INLINE: "5.2.0",
+	MOCKITO_JUNIT : "5.6.0",
+	MOCKITO_CORE  : "5.6.0",
+	MOCKITO_KOTLIN: "4.1.0",
+]
+
+ext.DependendsForTests = [
+
+	ANDROIDX: [
+		JUNIT_EXT    : "androidx.test.ext:junit:${VersionsForTests.JUNIT_EXT}",
+		ESPRESSO_CORE: "androidx.test.espresso:espresso-core:${VersionsForTests.ESPRESSO_CORE}",
+	],
+
+	MOCKITO : [
+		MOCKITO_INLINE: "org.mockito:mockito-inline:${VersionsForTests.MOCKITO_INLINE}",
+		MOCKITO_JUNIT : "org.mockito:mockito-junit-jupiter:${VersionsForTests.MOCKITO_JUNIT}",
+		MOCKITO_CORE  : "org.mockito:mockito-core:${VersionsForTests.MOCKITO_CORE}",
+		MOCKITO_KOTLIN: "org.mockito.kotlin:mockito-kotlin:${VersionsForTests.MOCKITO_KOTLIN}",
+	],
+
+	JUNIT   : "junit:junit:${VersionsForTests.JUNIT}",
+]

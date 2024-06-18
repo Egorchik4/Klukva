@@ -1,0 +1,14 @@
+ext.Modules = [
+	APP      : ":app",
+	FEATURE  : [
+		LOGIN      : ":feature:login",
+		SIGNIN     : ":feature:signin",
+		DATETIME   : ":feature:datetime",
+		MAP        : ":feature:map",
+		MAP_OF_CAFE: ":feature:mapofcafe",
+		PAYMENT    : ":feature:payment",
+		PROFILE    : ":feature:profile",
+		END        : ":feature:end",
+	],
+	COMPONENT: ":component",
+]
